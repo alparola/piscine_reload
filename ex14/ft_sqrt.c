@@ -6,7 +6,7 @@
 /*   By: alparola <alparola@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 16:39:52 by alparola          #+#    #+#             */
-/*   Updated: 2024/12/24 07:46:14 by alparola         ###   ########.fr       */
+/*   Updated: 2024/12/30 12:15:36 by alparola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ int	ft_sqrt(int nb)
 	mid = nb / 2;
 	while (mid > 0 && nb - (mid * mid) != 0)
 		mid--;
-	return mid;
+	return (mid);
 }

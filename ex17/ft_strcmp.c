@@ -6,14 +6,16 @@
 /*   By: alparola <alparola@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 16:59:33 by alparola          #+#    #+#             */
-/*   Updated: 2024/12/24 09:56:59 by alparola         ###   ########.fr       */
+/*   Updated: 2024/12/30 16:07:46 by alparola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strcmp(char *s1, char *s2)
 {
-	while (*s1 != 0 && *s2 != 0 && *(s1++) == *(s2++))
+	while (*s1 == *s2 && *s1 != 0 && *s2 != 0)
 	{
+		s1++;
+		s2++;
 	}
 	return (*s1 - *s2);
 }

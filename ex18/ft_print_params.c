@@ -6,30 +6,30 @@
 /*   By: alparola <alparola@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 17:17:51 by alparola          #+#    #+#             */
-/*   Updated: 2024/12/24 10:01:14 by alparola         ###   ########.fr       */
+/*   Updated: 2024/12/30 18:18:26 by alparola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
+void	ft_putchar(char c);
+
 int	main(int p, char **ps)
 {
-	int		i;
-	char	c;
+	int	r;
+	int	c;
 
-	i = 1;
-	c = '\n';
-	if (p > 1)
+	r = 1;
+	while (p > r)
 	{
-		while (i < p)
+		c = 0;
+		while (ps[r][c])
 		{
-			while (*ps[i] != 0)
-			{
-				write(1, ps[i]++, 1);
-			}
-			write(1, &c, 1);
-			i++;
+			ft_putchar(ps[r][c]);
+			c++;
 		}
+		ft_putchar('\n');
+		r++;
 	}
 	return (0);
 }

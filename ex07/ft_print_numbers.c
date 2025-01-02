@@ -6,11 +6,11 @@
 /*   By: alparola <alparola@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 20:09:25 by alparola          #+#    #+#             */
-/*   Updated: 2024/12/24 07:50:10 by alparola         ###   ########.fr       */
+/*   Updated: 2024/12/30 18:19:47 by alparola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+void	ft_putchar(char c);
 
 void	ft_print_numbers(void)
 {
@@ -19,7 +19,7 @@ void	ft_print_numbers(void)
 	letter = '0';
 	while (letter <= '9')
 	{
-		write(1, &letter, 1);
+		ft_putchar(letter);
 		letter++;
 	}
 }

@@ -6,29 +6,24 @@
 /*   By: alparola <alparola@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 20:46:43 by alparola          #+#    #+#             */
-/*   Updated: 2024/12/24 09:53:42 by alparola         ###   ########.fr       */
+/*   Updated: 2024/12/30 17:53:36 by alparola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_iterative_factorial(int nb)
 {
 	int	ret;
 
-	ret = nb;
-	if (nb != 0)
+	ret = 1;
+	if (nb >= 0 && nb <= 12)
 	{
-		if (nb < 0)
+		while (nb > 0)
 		{
-			while (++nb < 0)
-				ret *= nb;
+			ret *= nb;
+			nb -= 1;
 		}
-		else
-		{
-			while (--nb > 0)
-				ret *= nb;
-		}
+		return (ret);
 	}
-	return (ret);
+	else
+		return (0);
 }

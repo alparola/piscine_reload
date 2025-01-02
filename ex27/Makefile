@@ -6,7 +6,7 @@
 #    By: alparola <alparola@student.42barcelona.co  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/20 14:03:40 by alparola          #+#    #+#              #
-#    Updated: 2024/12/20 22:14:49 by alparola         ###   ########.fr        #
+#    Updated: 2024/12/30 16:18:37 by alparola         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,12 +22,11 @@ SRCS		=	main.c \
 SRCS		:=	$(addprefix $(SRCS_DIR), $(SRCS))
 OBJS		=	$(SRCS:.c=.o)
 
-CC		=	gcc
-CCFLAGS		=	-g -fsanitize=address -Wall -Werror -Wextra -std=c89
+CC		=	cc
+CCFLAGS		=	-Wall -Werror -Wextra
 LDFLAGS		=	$(CCFLAGS)
 
 all:		$(OBJS)
-		@mkdir -p srcs includes
 		$(CC) $(CCFLAGS) -I$(INCS_DIR) $(SRCS) -o $(NAME)
 
 clean:

@@ -6,16 +6,21 @@
 /*   By: alparola <alparola@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 18:41:43 by alparola          #+#    #+#             */
-/*   Updated: 2024/12/24 10:02:20 by alparola         ###   ########.fr       */
+/*   Updated: 2024/12/30 17:55:54 by alparola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
+void	ft_putchar(char c);
+
 void	ft_putstr(char *str)
 {
 	while (*str != 0)
-		write(1, str++, 1);
+	{
+		ft_putchar(*str);
+		str++;
+	}
 }
 
 int	ft_strcmp(char *s1, char *s2)
@@ -54,7 +59,6 @@ void	ft_recursive_sort(int c, char **ps)
 int	main(int p, char **ps)
 {
 	int		i;
-	char	*t;
 
 	i = p - 1;
 	ft_recursive_sort(i, ps);
